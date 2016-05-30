@@ -22,6 +22,7 @@ RUN apk add --update git nodejs curl && \
       | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     /usr/bin/caddy -version && \
+    npm uninstall -g gulp bower && \
     apk del git nodejs curl && \    
     rm -rf /tmp/* /var/cache/apk/* /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
     
