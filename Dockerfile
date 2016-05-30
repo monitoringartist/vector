@@ -25,7 +25,7 @@ RUN apk add --update git nodejs curl && \
     npm uninstall -g gulp bower && \
     apk del git nodejs curl && \    
     rm -rf /root/.npm /root/.cache /root/.config /root/.local /root/.ash_history \
-      /root/.v8flags /usr/share/man /tmp/* /var/cache/apk/* \
+      /root/.v8flags* /usr/share/man /tmp/* /var/cache/apk/* \
       /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
           
 EXPOSE 80
