@@ -24,8 +24,10 @@ RUN apk add --update git nodejs curl && \
     /usr/bin/caddy -version && \
     npm uninstall -g gulp bower && \
     apk del git nodejs curl && \    
-    rm -rf /tmp/* /var/cache/apk/* /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
-    
+    rm -rf /root/.npm /root/.cache /root/.config /root/.local /root/.ash_history \
+      /root/.v8flags /usr/share/man /tmp/* /var/cache/apk/* \
+      /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
+          
 EXPOSE 80
 CMD ["/usr/bin/caddy", "-root", "/usr/share/nginx/html", "-port", "80"]
 VOLUME ["/usr/share/nginx/html"]    
