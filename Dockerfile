@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Jan Garaj info@monitoringartist.com
 
 # version = git branch/tag, e.g. master, stable, tags/1.1.0, ...
-ENV VECTOR_VERSION=tags/1.1.0
+ENV VECTOR_VERSION=tags/v1.1.0
 
 RUN apk add --update git nodejs curl && \
     cd /tmp && \
